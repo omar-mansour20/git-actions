@@ -12,8 +12,8 @@ jobs:
 
     steps:
       - name: 'Testin Github action'
-      run: pwd
+        run: pwd
 
       - name: 'Testin printing'
-      run: echo omar
+        run: echo omar
 
