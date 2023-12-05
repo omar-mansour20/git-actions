@@ -11,9 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Testin Github action'
-        run: pwd
+      - name: 'before printing job cintents'
+        run: ls
 
-      - name: 'Testin printing'
+      - name: 'Testing printing'
         run: echo omar
+
+      - uses: actions/checkout@v3
+
+      - name: 'after printing job cintents'
+        run: ls
 
