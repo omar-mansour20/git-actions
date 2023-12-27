@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omar-dep
+  
+spec:
+  selector: 
+    matchlabels:
+      app: omar 
+  replicas: 3
+  strategy:
+    type: Recreate
+  template: 
+    metadata:
+      name: omar-pod
+      labels:
+        app: omar
+    spec:
+      containers:
+        - image: nginx:alpine
+          name: nginx-container
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "2" 
+            requests:
+              memory: "200Mi" 
